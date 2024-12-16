@@ -10,6 +10,7 @@ on:
   status:
     branches:
       - main
+      - test/pr-auto-merge
 
 jobs:
   auto_merge:
