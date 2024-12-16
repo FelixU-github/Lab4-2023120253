@@ -9,13 +9,15 @@ public class SolutionTest {
 
         // 测试用例 1: 基本功能测试
         assertEquals("6", solution.multiply("2", "3"));
-
+        assertEquals("8", solution.multiply("2", "4"));
+        assertEquals("9", solution.multiply("3", "3"));
         // 测试用例 2: 多位数相乘
         assertEquals("56088", solution.multiply("123", "456"));
 
         // 测试用例 3: 输入包含 "0"
         assertEquals("0", solution.multiply("0", "123"));
         assertEquals("0", solution.multiply("123", "0"));
+        assertEquals("0", solution.multiply("13", "0"));
 
         // 测试用例 4: 单位数相乘
         assertEquals("81", solution.multiply("9", "9"));
