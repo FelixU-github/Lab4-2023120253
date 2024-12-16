@@ -17,6 +17,7 @@ public class SolutionTest {
         // 测试用例 3: 输入包含 "0"
         assertEquals("0", solution.multiply("0", "123"));
         assertEquals("0", solution.multiply("123", "0"));
+        assertEquals("0", solution.multiply("13", "0"));
 
         // 测试用例 4: 单位数相乘
         assertEquals("81", solution.multiply("9", "9"));
