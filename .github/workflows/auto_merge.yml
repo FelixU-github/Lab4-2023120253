@@ -6,6 +6,7 @@ on:
       - labeled
       - ready_for_review
       - synchronize
+      - auto_merge
   status:
     branches:
       - main
