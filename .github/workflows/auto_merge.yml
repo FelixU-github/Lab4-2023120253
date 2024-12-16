@@ -33,11 +33,13 @@ jobs:
 
       # 运行测试
       - name: Run tests
+        id: run_tests
         run: mvn -B test --file pom.xml
 
       # 自动合并
       - name: Auto-merge PR
-#        if: ${{ github.event.pull_request.mergeable == true }}
+        if: ${{ steps.run_tests.outcome == 'success' }}
+
         run: |
           response=$(curl -s -o /dev/null -w "%{http_code}" -X PUT \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
